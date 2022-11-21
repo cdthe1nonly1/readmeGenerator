@@ -1,25 +1,25 @@
 <!DOCTYPE md>
-# a
+# ReadMe Generator
 
 ## Description:
-b
+Creates a readme file
 
 
 ## Technologies:
-c
+JavaScript, Node, Inquirer
 
 ## Links:
 
-link to github: d
-link to a webpage: e
+link to github: www.mygithub.com
+link to ReadMe Generator webpage: www.mypage.com
 
 ## Images:
 
-Image Link f
+Image Link /.assets.image.screenshot
 
 ## Usage:
 
-g.
+To create a readme file
 
 ## Licences:
 
