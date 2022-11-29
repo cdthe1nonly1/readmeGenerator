@@ -1,8 +1,8 @@
-// TODO: Include packages needed for this application
+// Packages needed for this to run
 const inquirer = require("inquirer");
 const fs = require("fs");
 const { Z_FIXED } = require("zlib");
-// TODO: Create an array of questions for user input
+// Array of questions to that to ask from node
 inquirer
   .prompt([
     {
@@ -17,7 +17,6 @@ inquirer
       name: "description",
     },
 
-    
     {
       type: "input",
       message: "Technologies Used",
@@ -49,9 +48,7 @@ inquirer
       type: "list",
       message: "Licences.",
       name: "licences",
-      choices: [
-        "mit","dnu","isc",'apache'
-      ]
+      choices: ["mit", "dnu", "isc", "apache"],
     },
   ])
   .then((response) => {
@@ -61,7 +58,7 @@ inquirer
     });
   });
 
-// TODO: Create a function to write README file
+// function that writes a readme file
 const generateMDfile = (response) => `<!DOCTYPE md>
 # ${response.applicationName}
 
@@ -87,13 +84,4 @@ ${response.usage}
 
 ## Licences:
 
-${response.licences}
-`; 
-
-// ends the readme file to import.
-
-// TODO: Create a function to initialize app
-// function init() {}
-
-// // Function call to initialize app
-// init();
+${response.licences}`;
