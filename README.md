@@ -1,26 +1,36 @@
 <!DOCTYPE md>
-# ReadMe Generator
+# Readme Generator
 
 ## Description:
 Creates a readme file
 
 
 ## Technologies:
-JavaScript, Node, Inquirer
+node js and javascript
 
-## Links:
+## Instalation Instructions:
+Run the index.js from the terminal
 
-link to github: www.mygithub.com
-link to ReadMe Generator webpage: www.mypage.com
+## Link to github:
+link to github: https://github.com/cdthe1nonly1/readmeGenerator.git
+
+## Link to application
+link to Readme Generator webpage: N/A
+
 
 ## Images:
+Image Link ![Image Link](./assets/screenshot.png)
 
-Image Link /.assets.image.screenshot
+## Contributing
+None
+
+## Tests
+No
 
 ## Usage:
 
-To create a readme file
+This application for automatically creating a readme file.
 
 ## Licences:
 
-apache
+none

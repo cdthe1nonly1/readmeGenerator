@@ -13,7 +13,7 @@ inquirer
 
     {
       type: "input",
-      message: "Brief description od application",
+      message: "Brief description of application",
       name: "description",
     },
 
@@ -21,6 +21,28 @@ inquirer
       type: "input",
       message: "Technologies Used",
       name: "technologies",
+    },
+    {
+      type: "list",
+      message: "Licences.",
+      name: "licences",
+      choices: ["mit", "dnu", "isc", "apache", "none"],
+    },
+    {
+      type: "input",
+      message: "Instalation instructions",
+      name: "instalationInsturctions",
+    },
+    {
+      type: "input",
+      message: "Contributing",
+      name: "contributing",
+    },
+    {
+      type: "list",
+      message: "Any Testing",
+      name: "tests",
+      choices: ["Yes", "No"],
     },
     {
       type: "input",
@@ -44,12 +66,6 @@ inquirer
       message: "What is the appicaton used for or usage.",
       name: "usage",
     },
-    {
-      type: "list",
-      message: "Licences.",
-      name: "licences",
-      choices: ["mit", "dnu", "isc", "apache"],
-    },
   ])
   .then((response) => {
     const content = generateMDfile(response);
@@ -69,14 +85,24 @@ ${response.description}
 ## Technologies:
 ${response.technologies}
 
-## Links:
+## Instalation Instructions:
+${response.instalationInsturctions}
 
+## Link to github:
 link to github: ${response.github}
+
+## Link to application
 link to ${response.applicationName} webpage: ${response.html}
 
-## Images:
 
-Image Link ${response.image}
+## Images:
+Image Link ![Image Link](${response.image})
+
+## Contributing
+${response.contributing}
+
+## Tests
+${response.tests}
 
 ## Usage:
 
