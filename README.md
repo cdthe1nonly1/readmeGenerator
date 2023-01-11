@@ -1,36 +1,45 @@
 <!DOCTYPE md>
 # Readme Generator
 
+
+
+## Table of Contents
+* [Description](#description)
+* [Technologies](#technologies)
+* [Instalation Instructions](#instalation-instructions)
+* [Questions](#questions)
+* [Link to Application](#link-to-application)
+* [Contributing](#contributing)
+* [Tests](#tests)
+* [Usage](#usage)
+
+
 ## Description:
-Creates a readme file
+Generates a readme file
 
 
 ## Technologies:
-node js and javascript
+Javascript
 
 ## Instalation Instructions:
-Run the index.js from the terminal
+run from terminal
 
-## Link to github:
-link to github: https://github.com/cdthe1nonly1/readmeGenerator.git
+## Questions:
+link to github: https://github.com/cdthe1nonly1 
+
+link to email: charles.b.dykstra@gmail.com
 
 ## Link to application
-link to Readme Generator webpage: N/A
-
-
-## Images:
-Image Link ![Image Link](./assets/screenshot.png)
+link to Readme Generator webpage: none
 
 ## Contributing
-None
+none
 
 ## Tests
 No
 
 ## Usage:
 
-This application for automatically creating a readme file.
+creates a readme file from prompts in a terminal.
 
-## Licences:
 
-none

@@ -24,8 +24,8 @@ inquirer
     },
     {
       type: "list",
-      message: "Licences.",
-      name: "licences",
+      message: "License.",
+      name: "license",
       choices: ["mit", "dnu", "isc", "apache", "none"],
     },
     {
@@ -46,19 +46,18 @@ inquirer
     },
     {
       type: "input",
-      message: "Link to your github page for this application.",
+      message: "Link to your github page.",
       name: "github",
+    },
+    {
+      type: "input",
+      message: "Link to your email.",
+      name: "email",
     },
     {
       type: "input",
       message: "Link of the application",
       name: "html",
-    },
-
-    {
-      type: "input",
-      message: "Link to an image of the application",
-      name: "image",
     },
 
     {
@@ -74,9 +73,49 @@ inquirer
     });
   });
 
+// TODO: Create a function that returns a license badge based on which license is passed in
+// If there is no license, return an empty string
+function renderLicenseBadge(license) {
+  if (license !== "none") {
+    return `![GitHub license](https://img.shields.io/badge/license-${license}-blue.svg)`;
+  }
+  return "";
+}
+
+// TODO: Create a function that returns the license link
+// If there is no license, return an empty string
+function renderLicenseLink(license) {
+  if (license !== "none") {
+    return `* [License](#license)`;
+  }
+  return "";
+}
+
+// TODO: Create a funcion that returns the license section of README
+// If there is no license, return an empty string
+function renderLicenseSection(license) {
+  if (license !== "none") {
+    return `## License \n This application is licensed under the ${license} license`;
+  }
+  return "";
+}
+
 // function that writes a readme file
 const generateMDfile = (response) => `<!DOCTYPE md>
 # ${response.applicationName}
+${renderLicenseBadge(response.license)}
+
+
+## Table of Contents
+* [Description](#description)
+* [Technologies](#technologies)
+* [Instalation Instructions](#instalation-instructions)
+* [Questions](#questions)
+* [Link to Application](#link-to-application)
+* [Contributing](#contributing)
+* [Tests](#tests)
+* [Usage](#usage)
+${renderLicenseLink(response.license)}
 
 ## Description:
 ${response.description}
@@ -88,15 +127,12 @@ ${response.technologies}
 ## Instalation Instructions:
 ${response.instalationInsturctions}
 
-## Link to github:
-link to github: ${response.github}
+## Questions:
+link to github: ${response.github} \n
+link to email: ${response.email}
 
 ## Link to application
 link to ${response.applicationName} webpage: ${response.html}
-
-
-## Images:
-Image Link ![Image Link](${response.image})
 
 ## Contributing
 ${response.contributing}
@@ -108,6 +144,5 @@ ${response.tests}
 
 ${response.usage}
 
-## Licences:
 
-${response.licences}`;
+${renderLicenseSection(response.license)}`;
