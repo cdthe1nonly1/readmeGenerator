@@ -73,7 +73,7 @@ inquirer
     });
   });
 
-// TODO: Create a function that returns a license badge based on which license is passed in
+// Returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
   if (license !== "none") {
@@ -82,8 +82,8 @@ function renderLicenseBadge(license) {
   return "";
 }
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
+// Returns the license link
+// If there is no license, return an empty string in the table of contents 
 function renderLicenseLink(license) {
   if (license !== "none") {
     return `* [License](#license)`;
@@ -91,8 +91,8 @@ function renderLicenseLink(license) {
   return "";
 }
 
-// TODO: Create a funcion that returns the license section of README
-// If there is no license, return an empty string
+// Returns the license section of README
+// If there is no license, return an empty string and does not appear
 function renderLicenseSection(license) {
   if (license !== "none") {
     return `## License \n This application is licensed under the ${license} license`;
